@@ -1,0 +1,342 @@
+{
+  "name": "WWW",
+  "intents": [
+    {
+      "intent": "store_location",
+      "examples": [
+        {
+          "text": "Nearest branch?"
+        },
+        {
+          "text": "Find nearest store"
+        },
+        {
+          "text": "Please help me find the nearest store"
+        },
+        {
+          "text": "nearest location"
+        },
+        {
+          "text": "where is the largest store"
+        },
+        {
+          "text": "Is there a store in the city center?"
+        },
+        {
+          "text": "I would like to go to a store"
+        },
+        {
+          "text": "looking for a location"
+        },
+        {
+          "text": "Closest store to my postcode"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "store_hours",
+      "examples": [
+        {
+          "text": "hi are you open now?"
+        },
+        {
+          "text": "what are the business hours?"
+        },
+        {
+          "text": "Until how late is the store open?"
+        },
+        {
+          "text": "what are the hours of operation?"
+        },
+        {
+          "text": "Are you open on public holidays?"
+        },
+        {
+          "text": "What is your earliest opening time?"
+        },
+        {
+          "text": "What time are you closing?"
+        },
+        {
+          "text": "What are your hours?"
+        },
+        {
+          "text": "store hours?"
+        },
+        {
+          "text": "Open on a sunday?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "products",
+      "examples": [
+        {
+          "text": "products that are currently on sale?"
+        },
+        {
+          "text": "is there any new products?"
+        },
+        {
+          "text": "What kind of fruits are available?"
+        },
+        {
+          "text": "Do you sell meat?"
+        },
+        {
+          "text": "what kind of fruits are currently on sale?"
+        },
+        {
+          "text": "weekly special?"
+        },
+        {
+          "text": "items on sale?"
+        },
+        {
+          "text": "items available?"
+        },
+        {
+          "text": "what are the items on sale?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "online_orders",
+      "examples": [
+        {
+          "text": "can i order online?"
+        },
+        {
+          "text": "Hi I ordered online and have yet to receive my groceries"
+        },
+        {
+          "text": "online groceries"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "payment_method",
+      "examples": [
+        {
+          "text": "can i pay by paypal?"
+        },
+        {
+          "text": "do you accept visa?"
+        },
+        {
+          "text": "payment options?"
+        },
+        {
+          "text": "payment methods?"
+        },
+        {
+          "text": "what are your payment options?"
+        },
+        {
+          "text": "what are your payment methods?"
+        },
+        {
+          "text": "can i pay by cash?"
+        },
+        {
+          "text": "how can i pay you?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "contact_information",
+      "examples": [
+        {
+          "text": "contact number?"
+        },
+        {
+          "text": "Am I able to talk to a representative?"
+        },
+        {
+          "text": "I would like to speak to customer service"
+        },
+        {
+          "text": "Is there a way to contact the store?"
+        },
+        {
+          "text": "Contact email?"
+        },
+        {
+          "text": "Can I email you?"
+        },
+        {
+          "text": "Is there a number to call?"
+        },
+        {
+          "text": "Can I call?"
+        },
+        {
+          "text": "Is there a way to contact the manager?"
+        },
+        {
+          "text": "Can I arrange someone to call me?"
+        },
+        {
+          "text": "Telephone number of the nearest store please?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "delivery",
+      "examples": [
+        {
+          "text": "when will my delivery arrive"
+        },
+        {
+          "text": "delivery estimate?"
+        },
+        {
+          "text": "delivery"
+        },
+        {
+          "text": "when will my groceries be delivered"
+        },
+        {
+          "text": "can my order be delivered to my door"
+        },
+        {
+          "text": "delivery estimate"
+        },
+        {
+          "text": "can i change the delivery time"
+        },
+        {
+          "text": "change delivery address"
+        },
+        {
+          "text": "can i track my order"
+        },
+        {
+          "text": "can i track my delivery"
+        },
+        {
+          "text": "track delivery"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "connect_to_agent",
+      "examples": [
+        {
+          "text": "can i talk to an agent?"
+        },
+        {
+          "text": "I don't want to talk to a bot"
+        },
+        {
+          "text": "can you connect me to an agent?"
+        },
+        {
+          "text": "agent help"
+        },
+        {
+          "text": "connect to an agent"
+        },
+        {
+          "text": "connect to a live representitive"
+        },
+        {
+          "text": "live representative"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ending_greeting",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "i'm good"
+        },
+        {
+          "text": "okay thank you"
+        },
+        {
+          "text": "see you"
+        },
+        {
+          "text": "Catch you later"
+        },
+        {
+          "text": "Thanks, bye"
+        },
+        {
+          "text": "finished"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "ending session"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "done"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "How are you?"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "Hey there!"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Good day"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [],
+  "workspace_id": "27e126fe-1a0e-4f54-9e65-c394932308c9",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}

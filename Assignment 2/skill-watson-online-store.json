@@ -1,0 +1,278 @@
+{
+  "name": "watson-online-store",
+  "intents": [
+    {
+      "intent": "ending",
+      "examples": [
+        {
+          "text": "okay"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you!"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "shirt",
+      "examples": [
+        {
+          "text": "sport"
+        },
+        {
+          "text": "addias shirt"
+        },
+        {
+          "text": "men's soccer"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "amazon",
+      "examples": [
+        {
+          "text": "amazon"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "startOver",
+      "examples": [
+        {
+          "text": "start again"
+        },
+        {
+          "text": "start over"
+        },
+        {
+          "text": "try again"
+        },
+        {
+          "text": "begin again"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "product",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "polo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cap",
+          "synonyms": [
+            "hats,caps"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "mug",
+          "synonyms": [
+            "mugs"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "shoe",
+          "synonyms": [
+            "boots"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "shirt",
+          "synonyms": [
+            "tshirts"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pants",
+          "synonyms": [
+            "pant",
+            "pants",
+            "long pants",
+            "short pants",
+            "black pants",
+            "blue pants",
+            "colored pants"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "books",
+          "synonyms": [
+            "book",
+            "books"
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please type your product"
+      },
+      "parent": "slot_2_1561513554653",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_4_1561513554654",
+      "previous_sibling": "handler_3_1561513554653"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1561513554653",
+      "context": {
+        "product": "@product"
+      },
+      "conditions": "@product",
+      "event_name": "input",
+      "dialog_node": "handler_3_1561513554653"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ok let me search for that"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "query": "$product",
+            "filter": "",
+            "query_type": "natural_language",
+            "response_type": "search_skill"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "conditions": "@product",
+      "dialog_node": "node_3_1561455817412",
+      "digress_out": "allow_all",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "slot",
+      "parent": "node_3_1561455817412",
+      "variable": "$product",
+      "dialog_node": "slot_1_1561459568532"
+    },
+    {
+      "type": "slot",
+      "parent": "node_34_1489526806680",
+      "variable": "$product",
+      "dialog_node": "slot_2_1561513554653"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1561459568532",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1561459568532",
+      "previous_sibling": "handler_2_1561459568532"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_1_1561459568532",
+      "context": {
+        "product": "@product"
+      },
+      "conditions": "@product",
+      "event_name": "input",
+      "dialog_node": "handler_2_1561459568532"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "text": {
+          "values": [
+            "Hello! and Welcome to Watson Online Store. What do you want to buy?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#startOver",
+      "dialog_node": "node_1_1561513456591",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_3_1561455817412"
+      },
+      "conditions": "anything_else",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_34_1489526806680",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1561513456591",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "text": {
+          "values": [
+            "Hello! and Welcome to Watson Online Store. What do you want to buy?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "f6af9c93-e23c-4fb1-993c-f0fb18568baf",
+  "counterexamples": [
+    {
+      "text": "how about some politics?"
+    }
+  ],
+  "learning_opt_out": false,
+  "status": "Available"
+}
